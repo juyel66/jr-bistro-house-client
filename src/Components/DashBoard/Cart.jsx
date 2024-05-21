@@ -39,7 +39,7 @@ const Cart = () => {
 
     }
     return (
-        <div>
+        <div clas>
             <div className=" flex justify-evenly items-center mb-5">
             <h2 className=" lg:text-2xl  font-bold">Total Orders: {cart.length}</h2>
             <h2 className="lg:text-2xl font-bold ">Total Price: {totalPrice}</h2>
@@ -50,8 +50,8 @@ const Cart = () => {
             <div className="overflow-x-auto">
   <table className="table w-full">
     {/* head */}
-    <thead className="bg-orange-400">
-      <tr>
+    <thead className="">
+      <tr className="bg-green-400  ">
         <th>
           No
         </th>
@@ -61,14 +61,14 @@ const Cart = () => {
         <th>Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="">
         {
-            cart.map((item, index) =>  <tr key={item._id}>
+            cart.map((item, index) =>  <tr className=""  key={item._id}>
                 <th>
                     {index +1}
                   
                 </th>
-                <td>
+                <td className="">
                   <div className="flex items-center gap-3">
                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
@@ -85,7 +85,7 @@ const Cart = () => {
                     ${item.price}
                 </td>
                 <th>
-                  <button onClick={()=>handleDelete(item._id)} className="btn btn-ghost btn-lg text-red-600"><FaTrashAlt></FaTrashAlt></button>
+                  <button onClick={()=>handleDelete(item._id)} className="btn btn-ghost btn-lg text-green-600"><FaTrashAlt></FaTrashAlt></button>
                 </th>
               </tr> )
         }

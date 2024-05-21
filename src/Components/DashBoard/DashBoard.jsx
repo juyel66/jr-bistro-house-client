@@ -1,11 +1,13 @@
 import { FaAd, FaCalendar, FaHome, FaList, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useCarts from "../../Hooks/useCarts";
 
 
 const DashBoard = () => {
+    const [cart]=useCarts();
     return (
-        <div className="flex">
-            <div className="lg:w-64 min-h-screen bg-orange-400">
+        <div className="flex bg-green-100">
+            <div className="lg:w-64 min-h-screen bg-green-500">
                 {/* <ul>
                    
                     <li className="flex items-center lg:mt-4 text-white rounded-lg p-1 ">  <div className="lg:ml-2 mr-2"><FaHome></FaHome></div> <NavLink to='/dashboard/cart' >User Home</NavLink></li>
@@ -15,7 +17,12 @@ const DashBoard = () => {
                     <li className="flex items-center lg:mt-4 text-white rounded-lg p-1 bg-blue-600 ">  <div className="lg:ml-2 mr-2"><  FaShoppingCart></FaShoppingCart></div> <NavLink to='/dashboard/cart' > My Cart</NavLink></li>
                 </ul> */}
 
-                <ul className="menu p-4">
+                <ul className="menu p-4 lg:fixed  ">
+                <li>
+                        <NavLink to ='/dashboard/cart' >
+                            <FaShoppingCart></FaShoppingCart>
+                            User Cart ({cart.length})</NavLink>
+                    </li>
                     <li>
                         <NavLink to ='/dashboard/UserHome' >
                             <FaHome></FaHome>
@@ -31,11 +38,7 @@ const DashBoard = () => {
                             <FaHome></FaHome>
                             User Home</NavLink>
                     </li>
-                    <li>
-                        <NavLink to ='/dashboard/cart' >
-                            <FaShoppingCart></FaShoppingCart>
-                            User Cart</NavLink>
-                    </li>
+                  
                     <li>
                         <NavLink to ='/dashboard/review' >
                             <FaAd></FaAd>
@@ -68,7 +71,7 @@ const DashBoard = () => {
                 </ul>
 
             </div>
-            <div className="flex-1 lg:p-8 p-2">
+            <div className="flex-1  lg:p-8 p-2">
                 <Outlet></Outlet>
             </div>
             
