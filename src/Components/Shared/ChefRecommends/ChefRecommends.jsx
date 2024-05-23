@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SectionsTitle from "../../SectionsTitle/SectionsTitle";
 
 
@@ -17,9 +18,9 @@ const ChefRecommends = () => {
     <p className="text-3xl text-center ">Caeser Salad</p>
     <h2 className="text-center">Lettuce, Eggs, Parmesan Cheese, Chicken <br /> Breast Fillets.</h2>
 
-    <div className="card-actions justify-center">
-      <button className="btn text-[#BB8506] lg:w-[180px] border-t-[7px] btn-outline text-xl">Add to card</button>
-    </div>
+    <Link to='/order/salad' className="card-actions justify-center">
+      <button className="btn text-[#BB8506] lg:w-[180px] btn-outline text-xl border-t-[7px]">Add to card</button>
+    </Link>
   </div>
    </div>
                          {/* card-1 */}
@@ -29,9 +30,9 @@ const ChefRecommends = () => {
     <p className="text-3xl text-center ">Caeser Salad</p>
     <h2 className="text-center">Lettuce, Eggs, Parmesan Cheese, Chicken <br /> Breast Fillets.</h2>
 
-    <div className="card-actions justify-center">
-      <button className="btn text-[#BB8506] lg:w-[180px] text-xl border-t-[7px] btn-outline">Add to card</button>
-    </div>
+    <Link to='/order/salad' className="card-actions justify-center">
+      <button className="btn text-[#BB8506] lg:w-[180px] btn-outline text-xl border-t-[7px]">Add to card</button>
+    </Link>
   </div>
    </div>
                          {/* card-1 */}
@@ -41,9 +42,9 @@ const ChefRecommends = () => {
     <p className="text-3xl text-center ">Caeser Salad</p>
     <h2 className="text-center">Lettuce, Eggs, Parmesan Cheese, Chicken <br /> Breast Fillets.</h2>
 
-    <div className="card-actions justify-center">
+    <Link to='/order/salad' className="card-actions justify-center">
       <button className="btn text-[#BB8506] lg:w-[180px] btn-outline text-xl border-t-[7px]">Add to card</button>
-    </div>
+    </Link>
   </div>
    </div>
             </div>

@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import userAxiosPublic from "../Hook/userAxiosPublic";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 const SignUp = () => {
@@ -18,7 +20,7 @@ const SignUp = () => {
         
     // }
 
-
+    const axiosPublic = userAxiosPublic();
     const {createUser,updateUserProfile} = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -41,16 +43,30 @@ const SignUp = () => {
 
         updateUserProfile(data.name, data.photoURL)
         .then(() => {
-          console.log('user profile info updated')
-          reset()
-          Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: "User create successful",
-            showConfirmButton: false,
-            timer: 1700
-          });
-          navigate('/')
+          const userInfo = { 
+            name: data.name,
+            email: data.email,
+            password: data.password,
+          }
+          axiosPublic.post('/users', userInfo)
+          .then(res => {
+            if(res.data.insertedId){
+
+              console.log('user added to the database ')
+              reset()
+              Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "User create successful",
+                showConfirmButton: false,
+                timer: 1700
+              });
+              navigate('/')
+
+            }
+          })
+
+
 
 
         })
@@ -146,6 +162,7 @@ const SignUp = () => {
                 <input type="submit" value='Register' className="btn btn-primary" />
               </div>
             </form>
+            <SocialLogin></SocialLogin>
             <p  className='pl-8 pb-5  '>Already have an account please <Link to='/login' className="hover:underline text-blue-600 ">login</Link> </p>
           </div>
         </div>

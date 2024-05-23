@@ -10,6 +10,7 @@ import SignUp from "../SignUp/SignUp";
 import PrivetRout from "../PrivetRout/PrivetRout";
 import DashBoard from "../DashBoard/DashBoard";
 import Cart from "../DashBoard/Cart";
+import AllUsers from "../DashBoard/Admin/AllUsers";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -45,11 +46,17 @@ import Cart from "../DashBoard/Cart";
     },
     {
       path: 'dashboard',
-      element: <DashBoard></DashBoard>,
+      element: <PrivetRout><DashBoard></DashBoard></PrivetRout>,
       children: [
         {
           path: 'cart',
           element: <Cart></Cart>
+        },
+        // addmin rout 
+        {
+          path: 'users',
+          element:<AllUsers></AllUsers>
+
         }
       ]
     }

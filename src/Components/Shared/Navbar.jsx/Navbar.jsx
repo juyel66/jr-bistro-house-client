@@ -78,7 +78,7 @@ const Navbar = () => {
   );
 
   return (
-    <div>
+    <div className="">
       <div className="navbar  rounded-xl fixed z-10 bg-opacity-55 h-10 bg-black text-white max-w-screen-xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -106,12 +106,12 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="lg:flex hidden items-center gap-1">
-          <img className="lg:w-10  w-5 rounded-full"  src="https://i.ibb.co/1MNP4gP/imresizer-1715263855167.jpg" alt="" />
+          <img className="lg:w-10 animate-pulse   w-5 rounded-full"  src="https://i.ibb.co/1MNP4gP/imresizer-1715263855167.jpg" alt="" />
           <a className="lg:text-xl  text-[9px] lg:font-extrabold font-bold rounded-xl     lg:w-[180px] w-[100px] ">
             JR Bistro House
           </a>
           </div>
-          <img className="lg:w-10 w-5 lg:hidden mr-1 rounded-full"  src="https://i.ibb.co/1MNP4gP/imresizer-1715263855167.jpg" alt="" />
+          <img className="lg:w-10 w-5 animate-spin lg:hidden mr-1 rounded-full"  src="https://i.ibb.co/1MNP4gP/imresizer-1715263855167.jpg" alt="" />
           <a className="lg:text-xl lg:hidden  text-[9px] lg:font-extrabold font-bold rounded-xl     lg:w-[180px] w-[100px] ">
             Bistro_House
           </a>

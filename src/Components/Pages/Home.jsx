@@ -10,7 +10,7 @@ import PopularMenu from "./PopularMenu/PopularMenu";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <Helmet><title>JR Bistro | Home</title></Helmet>
             <SwiperSlider></SwiperSlider>
             <div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import SectionsTitle from '../../SectionsTitle/SectionsTitle';
 import MenuItems from '../../Shared/MenuItems/MenuItems';
 import useMenu from '../../../Hooks/useMenu';
+import { Link } from 'react-router-dom';
 
 const PopularMenu = () => {
     const [menu] = useMenu();
@@ -19,7 +20,7 @@ const PopularMenu = () => {
                         popular.map(item => <MenuItems key={item._id} item={item}></MenuItems>)
                     }
                 </div>
-                <div className='flex justify-center mt-5'><button className="btn text-[#BB8506] lg:w-[180px] btn-outline text-xl ">View full menu</button></div>
+                <Link to='/menu' className='flex justify-center mt-5'><button className="btn text-[#BB8506] lg:w-[180px] btn-outline text-xl ">View full menu</button></Link>
             </section>
             
         </div>
