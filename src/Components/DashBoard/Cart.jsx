@@ -1,7 +1,9 @@
-import { FaTrash, FaTrashAlt } from "react-icons/fa";
+import { FaPaypal, FaTrash, FaTrashAlt } from "react-icons/fa";
 import useCarts from "../../Hooks/useCarts";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../Hook/useAxiosSecure";
+import { Link } from "react-router-dom";
+import { MdPayments } from "react-icons/md";
 
 
 const Cart = () => {
@@ -43,7 +45,11 @@ const Cart = () => {
             <div className=" flex justify-evenly items-center mb-5">
             <h2 className=" lg:text-2xl  font-bold">Total Orders: {cart.length}</h2>
             <h2 className="lg:text-2xl font-bold ">Total Price: {totalPrice}</h2>
-            <button className="btn btn-primary ">Pay now</button>
+           { cart.length ? <Link to ='/dashboard/payment'>
+            <button className="btn text-xl  bg-green-500  ">Pay now <MdPayments /> </button>
+            </Link>:
+             <button disabled className="btn text-xl btn-primary ">Pay now</button>
+            }
             </div>
 
 
