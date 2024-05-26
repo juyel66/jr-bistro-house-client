@@ -158,6 +158,12 @@ const Navbar = () => {
             </svg>
           </label>
 
+          {/* <img
+                      className="  rounded-full w-10 h-10  lg:flex hidden border-2 border-green-500"
+                      src={user?.photoURL}
+                      alt=""
+                    /> */}
+
           {/* {
         user ? <> <li><button onClick={handleLogout} className= "btn btn-outline text-white " >Logout</button>
         </li></>:

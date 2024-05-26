@@ -11,6 +11,10 @@ import PrivetRout from "../PrivetRout/PrivetRout";
 import DashBoard from "../DashBoard/DashBoard";
 import Cart from "../DashBoard/Cart";
 import AllUsers from "../DashBoard/Admin/AllUsers";
+import AddItems from "../DashBoard/AddItems/AddItems";
+import AdminRout from "../AdminRout/AdminRout";
+import ManageItems from "../DashBoard/ManageItems/ManageItems";
+import UpdateItem from "../DashBoard/UpdateItem/UpdateItem";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -43,7 +47,8 @@ import AllUsers from "../DashBoard/Admin/AllUsers";
         }
       ]
 
-    },
+    }, 
+    // normal user rout 
     {
       path: 'dashboard',
       element: <PrivetRout><DashBoard></DashBoard></PrivetRout>,
@@ -52,11 +57,24 @@ import AllUsers from "../DashBoard/Admin/AllUsers";
           path: 'cart',
           element: <Cart></Cart>
         },
-        // addmin rout 
+        // admin  rout 
         {
           path: 'users',
-          element:<AllUsers></AllUsers>
+          element:<AdminRout><AllUsers></AllUsers></AdminRout>
 
+        },
+        {
+          path: 'addItems',
+          element:<AdminRout><AddItems></AddItems></AdminRout>
+        },
+        {
+          path: 'updateItem/:id',
+          element: <AdminRout><UpdateItem></UpdateItem></AdminRout>,
+          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+        },
+        {
+          path: 'manageItems',
+          element: <AdminRout><ManageItems></ManageItems></AdminRout>
         }
       ]
     }
