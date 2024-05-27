@@ -66,6 +66,7 @@ const updateUserProfile = (name,photo) =>{
         .then(res =>{
            if(res.data.token){
              localStorage.setItem('access-token', res.data.token)
+             setLoading(false);
            }
         })
 
@@ -73,13 +74,15 @@ const updateUserProfile = (name,photo) =>{
       else{
         //TODO: remove token (if token stored in the client site local storage, caching, in money )
         localStorage.removeItem('access-token')
+        setLoading(false);
 
       }
        // jwt jwt jwt jwt jwt jwt end
       
       console.log("Current user: ", currentUser);
-      setLoading(false);
+     
     });
+
     return () => {
       unsubscribe();
     };

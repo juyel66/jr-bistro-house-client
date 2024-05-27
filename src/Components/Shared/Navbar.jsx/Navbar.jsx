@@ -12,8 +12,10 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { IoCartSharp } from "react-icons/io5";
 import useCarts from "../../../Hooks/useCarts";
+import useAdmin from "../../Hook/useAdmin";
 
 const Navbar = () => {
+  const [isAdmin] = useAdmin();
   //   const { logOut, user } = useContext(AuthContext);
     const [theme, setTheme] = useState(() => {
       const storedTheme = localStorage.getItem("theme");
@@ -64,6 +66,16 @@ const Navbar = () => {
       </li>
       <li className="mr-2"><NavLink className={({ isActive }) => isActive? "btn btn-outline btn-success text-bold text-xl": "text-xl font-bold lg:text-white text-black " } to="/order/salad" >Order</NavLink>
       </li>
+
+      {
+        user && isAdmin &&   <li className="mr-2"><NavLink className={({ isActive }) => isActive? "btn btn-outline btn-success text-bold text-xl": "text-xl font-bold lg:text-white text-black " } to="/dashboard/adminHome" >Dashboard</NavLink>
+        </li>
+      }
+      {
+        user && !isAdmin &&   <li className="mr-2"><NavLink className={({ isActive }) => isActive? "btn btn-outline btn-success text-bold text-xl": "text-xl font-bold lg:text-white text-black " } to="/dashboard/userHome" >Dashboard</NavLink>
+        </li>
+      }
+    
       <li>
       <Link to='/dashboard/cart' className="btn bg-gray-500">
       <p className="text-2xl">< IoCartSharp /></p>
