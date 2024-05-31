@@ -19,6 +19,7 @@ import Payment from "../DashBoard/Payment/Payment";
 import PaymentHistory from "../DashBoard/PaymentHistory/PaymentHistory";
 import UserHome from "../DashBoard/UserHome/UserHome";
 import AdminHome from "../DashBoard/AdminHome/AdminHome";
+import Booking from "../DashBoard/Booking";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -90,11 +91,15 @@ import AdminHome from "../DashBoard/AdminHome/AdminHome";
         {
           path: 'updateItem/:id',
           element: <AdminRout><UpdateItem></UpdateItem></AdminRout>,
-          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+          loader: ({params}) => fetch(`https://jr-bistro-house-server.vercel.app/menu/${params.id}`)
         },
         {
           path: 'manageItems',
           element: <AdminRout><ManageItems></ManageItems></AdminRout>
+        },
+        {
+          path: 'bookings',
+          element:<Booking></Booking>
         }
       ]
     }

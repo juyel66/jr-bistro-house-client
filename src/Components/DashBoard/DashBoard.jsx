@@ -86,25 +86,25 @@ const DashBoard = () => {
                   User Cart ({cart.length})
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/dashboard/UserHome">
                   <FaHome></FaHome>
                   User Home
                 </NavLink>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <NavLink to="/dashboard/History">
                   <FaCalendar></FaCalendar>
                   Not History
                 </NavLink>
-              </li>
+              </li> */}
 
-              <li>
+              {/* <li>
                 <NavLink to="/dashboard/review">
                   <FaAd></FaAd>
                   Add a Review
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink to="/dashboard/paymentHistory">
                   <FaList></FaList>
