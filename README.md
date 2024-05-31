@@ -37,7 +37,7 @@ To get a local copy up and running, follow these steps:
 ### Steps
 1. Clone the repository:
     ```sh
-    git clone client site https://github.com/juyel66/jr-bistro-house-cleint
+    git clone client site https://github.com/juyel66/jr-bistro-house-client
     ```
     ```sh
     git clone server site https://github.com/juyel66/jr-bistro-house-server
