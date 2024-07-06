@@ -104,7 +104,16 @@ Contributions are welcome! Please follow these steps to contribute:
 3. Commit your changes (`git commit -m 'Add some feature'`).
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
+   
 
+## How to Use the Project After Cloning
+
+After cloning and installing the project, follow these steps:
+
+1. Browse the Menu: View details of each dish along with descriptions and prices.
+2. Make Online Reservations: Reserve tables online and check real-time availability.
+3. Place Orders: Place orders directly through the website and pay securely through the integrated payment system.
+4. Access the Admin Panel: Navigate to the admin panel to manage menu items, orders, reservations, and payments.
 ## Contact
 For any inquiries or feedback, please contact us at info@jrbistrohouse.com.
 
