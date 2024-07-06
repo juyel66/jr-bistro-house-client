@@ -11,9 +11,7 @@ Welcome to the JR Bistro House website repository. This project is a fully funct
 5. [Payment System](#payment-system)
 6. [Admin Panel](#admin-panel)
 7. [Technologies Used](#technologies-used)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Contact](#contact)
+
 
 ## Project Overview
 The JR Bistro House Restaurant website is designed to provide a seamless online experience for customers looking to explore our menu, make reservations, and place orders. The website includes a secure payment system and an admin panel for efficient management of restaurant operations.
@@ -61,13 +59,6 @@ To get a local copy up and running, follow these steps:
     npm start
     ```
 
-## Usage
-Once the application is up and running, you can:
-
-- Browse the menu and view details of each dish.
-- Make table reservations online.
-- Place orders and pay securely through the integrated payment system.
-- Access the admin panel to manage the restaurant's operations.
 
 ## Payment System
 The payment system is integrated using Stripe, ensuring secure and efficient transactions. Follow these steps to set up the payment system:
@@ -96,27 +87,8 @@ To access the admin panel, navigate to `/admin` after starting the application. 
 - **Payment Integration**: Stripe
 - **Authentication**: JWT (JSON Web Tokens)
 
-## Contributing
-Contributions are welcome! Please follow these steps to contribute:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
    
-
-## How to Use the Project After Cloning
-
-After cloning and installing the project, follow these steps:
-
-1. Browse the Menu: View details of each dish along with descriptions and prices.
-2. Make Online Reservations: Reserve tables online and check real-time availability.
-3. Place Orders: Place orders directly through the website and pay securely through the integrated payment system.
-4. Access the Admin Panel: Navigate to the admin panel to manage menu items, orders, reservations, and payments.
 ## Contact
-For any inquiries or feedback, please contact us at info@jrbistrohouse.com.
+For any inquiries or feedback, please contact us at mdjuyelrana.com.bd1@gmail.com
 
----
-
-Thank you for visiting the JR Bistro House Restaurant website repository. We hope you have a pleasant experience using our site!
