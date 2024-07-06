@@ -3,16 +3,6 @@
 
 Welcome to the JR Bistro House website repository. This project is a fully functional restaurant website featuring an integrated payment system and an admin panel for managing various aspects of the site.
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Payment System](#payment-system)
-6. [Admin Panel](#admin-panel)
-7. [Technologies Used](#technologies-used)
-
-
 ## Project Overview
 The JR Bistro House Restaurant website is designed to provide a seamless online experience for customers looking to explore our menu, make reservations, and place orders. The website includes a secure payment system and an admin panel for efficient management of restaurant operations.
 
